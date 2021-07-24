@@ -8,7 +8,13 @@ public class JuegoRPGPrincipal {
         System.out.println(nombre);
         PersonajePrincipal personaje1 = new PersonajePrincipal();
         personaje1.atributos(nombre);
-        
+        if (personajePrincipal.vida = 0 ){
+            System.out.println("Lo sentimos, pero no fuiste seleccionado para entrar a Nautilus");
+            break;
+        } else {
+            break;
+        }
+
 
     }
 }
