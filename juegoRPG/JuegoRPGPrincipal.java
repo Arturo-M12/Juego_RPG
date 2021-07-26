@@ -14,7 +14,10 @@ public class JuegoRPGPrincipal {
         } else {
             break;
         }
-
-
+        //Jefe o Personaje 2
+        entregaDeProyectos();
+        System.out.println("¡Oh no! Te has topado con " + entregaDeProyectos + " .");
+        //Espacio para que se desarrolle la pelea
+        System.out.println("Felicidades, lograste derrotar a la" + entregaDeProyectos + " .");
     }
 }
