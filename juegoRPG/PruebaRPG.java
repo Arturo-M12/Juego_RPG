@@ -11,9 +11,8 @@ public class PruebaRPG {
         int ataqueEspecial = 50;
         int ataqueBasico = 30;
         String eleccionDeAtaque;
-        Inventario inventario;
-        inventario = new Inventario();
-        int seleccionInventario;
+        Inventario inv;
+        inv = new Inventario();
         
         
 
@@ -32,12 +31,12 @@ public class PruebaRPG {
             if(Rand.enemyAtack()){
                 System.out.println("El enemigo entrevista te ha golpeado.");
                 System.out.println("El enemigo ha usado ¿Que vas a aportar al equipo?");
-                vida = vida - 30;
+                vida -= 30;
 
             }else{
                 System.out.println("El enemigo entrevista te ha golpeado.");
                 System.out.println("El enemigo ha usado pregunta capciosa");
-                vida = vida - 15;
+                vida -=  15;
             }
 
             System.out.println(nombrePrincipal + ": Que vas a hacer?");
@@ -69,8 +68,8 @@ public class PruebaRPG {
                         eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
                     }
                     
-                } else{
-                    
+                } if (eleccionDeAtaque.equals("C")){
+                    inv.elegirInv(vida,ataqueEspecial,true);
                 }
             }
 
@@ -80,19 +79,19 @@ public class PruebaRPG {
         System.out.println("Felicidades! Has derrotado a Entrevista");
         vida = 100;
         atckEspFal = 2;
-
-        System.out.println("Te has encontrado con el enemigo entrega de proyectos");
+    
+        System.out.println("Te has encontrado con el enemigo ENTREGA DE PROYECTOS");
             
             do{
                 if(Rand.enemyAtack()){
                     System.out.println("El enemigo entrega de proyectos te ha golpeado.");
                     System.out.println("El enemigo ha usado eres el unico que trabaja en el equipo");
-                    vida = vida - 30;
+                    vida -= 30;
 
                 }else{
                     System.out.println("El enemigo entrega de proyectos te ha golpeado.");
                     System.out.println("El enemigo ha usado ensayo de 25 cuartillas en formato Apa");
-                    vida = vida - 20;
+                    vida -= 20;
                 }
 
                 if (vida >= 21){
@@ -101,6 +100,7 @@ public class PruebaRPG {
                 System.out.println("Te quedan " + atckEspFal + "  ataques especiales disponibles.");
                 System.out.println("A) Ataque basico");
                 System.out.println("B) Ataque especial");
+                System.out.println("C) Inventario");
 
                 eleccionDeAtaque = sc.next().toUpperCase();
                     if (eleccionDeAtaque.equals("A")) {
@@ -119,6 +119,8 @@ public class PruebaRPG {
                             System.out.println("A Entrevista le queda " + vidaSegundo + " de vida.");
                             atckEspFal = atckEspFal -1;
                             eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
+                        } if (eleccionDeAtaque.equals("C")){
+                            inv.elegirInv(vida,ataqueEspecial,true);
                         }
                     }
                 }
@@ -131,20 +133,20 @@ public class PruebaRPG {
             System.out.println("Felicidades! Has derrotado a Entrega de Proyectos");
             vida = 100;
             atckEspFal = 2; 
-
-            System.out.println("Te has encontrado con Platica con Vic");
+            
+            System.out.println("Te has encontrado con PLATICA CON VIC");
             
             do{
                 
                         if(Rand.enemyAtack()){
                             System.out.println("El enemigo entrega de proyectos te ha golpeado.");
                             System.out.println("El enemigo ha usado: ¿Por que te tengo que dejar entrar en el equipo?");
-                            vida = vida - 45;
+                            vida -= 45;
 
                         }else{
                             System.out.println("El enemigo entrega de proyectos te ha golpeado.");
                             System.out.println("El enemigo ha usado pregunta basica");
-                            vida = vida - 30;
+                            vida -= 30;
                         }
 
                         if (vida >= 21){
@@ -153,6 +155,7 @@ public class PruebaRPG {
                         System.out.println("Te quedan " + atckEspFal + "  ataques especiales disponibles.");
                         System.out.println("A) Ataque basico");
                         System.out.println("B) Ataque especial");
+                        System.out.println("C) Inventario");
 
                         eleccionDeAtaque = sc.next().toUpperCase();
                             if (eleccionDeAtaque.equals("A")) {
@@ -171,6 +174,8 @@ public class PruebaRPG {
                                     System.out.println("A Entrevista le queda " + vidaTercero + " de vida.");
                                     atckEspFal = atckEspFal -1;
                                     eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
+                                } if (eleccionDeAtaque.equals("C")){
+                                    inv.elegirInv(vida,ataqueEspecial,true);
                                 }
                             }
                         }
