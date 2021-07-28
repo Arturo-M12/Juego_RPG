@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.Scanner;
 public class Inventario {
     /*ArrayList <String> cosasDeInventario;
@@ -19,44 +19,47 @@ public class Inventario {
     boolean obj4bol = true;
     String seleccionInventario;
     boolean conciclo = true;
+    String seleccionInventario1;
     public void elegirInv(int vida, int ataqueEspecial,boolean conciclo) {
-        
+        Scanner schere = new Scanner(System.in);
         while (conciclo == true){
-            Scanner schere = new Scanner(System.in);
             textoInventario1();
             seleccionInventario = schere.nextLine();
-            schere.close();
             if (seleccionInventario.equals("1")) {
                 if (obj1bol == true){
                     vida += 30;
                     obj1bol = false; 
+                    
                 } else {
                     textoInventario3();
-                    break;
+                    
                 }
             } else if (seleccionInventario.equals("2")) {
                 if (obj2bol == true){
                     ataqueEspecial *= 2;
                     obj2bol = false; 
+                
                 } else {
                     textoInventario3();
-                    break;
+                    
                 }
             } else if (seleccionInventario.equals("3")) {
                 if (obj3bol == true){
                     vida += 50;
                     obj3bol = false; 
+                
                 } else {
                     textoInventario3();
-                    break;
+                    
                 }
             } else if (seleccionInventario.equals("4")) {
                 if (obj4bol == true){
                     vida += 80;
                     obj4bol = false; 
+                    
                 } else {
                     textoInventario3();
-                    break;
+                    
                 } 
                     
                 
@@ -65,7 +68,10 @@ public class Inventario {
             conciclo = false;
         }
         textoInventario2(vida,ataqueEspecial);
-        schere.close();
+        System.out.println("Presiona enter para continuar");
+        seleccionInventario1 = schere.nextLine();
+
+        //schere.close();
     }
         }
         
