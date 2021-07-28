@@ -29,12 +29,12 @@ public class PruebaRPG {
 
         do{
             if(Rand.enemyAtack()){
-                System.out.println("El enemigo entrevista te ha golpeado.");
+                System.out.println("El enemigo ENTREVISTA te ha golpeado.");
                 System.out.println("El enemigo ha usado ¿Que vas a aportar al equipo?");
                 vida -= 30;
 
             }else{
-                System.out.println("El enemigo entrevista te ha golpeado.");
+                System.out.println("El enemigo ENTREVISTA te ha golpeado.");
                 System.out.println("El enemigo ha usado pregunta capciosa");
                 vida -=  15;
             }
@@ -50,7 +50,7 @@ public class PruebaRPG {
                 if (eleccionDeAtaque.equals("A")) {
                     System.out.println("Has utilizado el ataque se me trabo el zoom");
                     vidaPrimer = vidaPrimer - ataqueBasico;
-                    System.out.println("A Entrevista le queda " + vidaPrimer + " de vida.");
+                    System.out.println("A ENTREVISTA le queda " + vidaPrimer + " de vida.");
                     eleccionDeAtaque = eleccionDeAtaque.replace("A"," ");
                         
                 } else {
@@ -63,20 +63,23 @@ public class PruebaRPG {
                     } else {
                         System.out.println("Has utilizado el ataque disparo de Balderas");
                         vidaPrimer = vidaPrimer - ataqueEspecial;
-                        System.out.println("A Entrevista le queda " + vidaPrimer + " de vida.");
+                        System.out.println("A ENTREVISTA le queda " + vidaPrimer + " de vida.");
                         atckEspFal = atckEspFal -1;
                         eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
                     }
                     
                 } if (eleccionDeAtaque.equals("C")){
                     inv.elegirInv(vida,ataqueEspecial,true);
+                    vida = inv.cambioV;
+                    ataqueEspecial = inv.cambioA;
+                
                 }
             }
 
 
         }while((vidaPrimer >= 0) && (vida >= 1));
 
-        System.out.println("Felicidades! Has derrotado a Entrevista");
+        System.out.println("Felicidades! Has derrotado a ENTREVISTA");
         vida = 100;
         atckEspFal = 2;
     
@@ -84,12 +87,12 @@ public class PruebaRPG {
             
             do{
                 if(Rand.enemyAtack()){
-                    System.out.println("El enemigo entrega de proyectos te ha golpeado.");
+                    System.out.println("El enemigo ENTREGA DE PROYECTOS te ha golpeado.");
                     System.out.println("El enemigo ha usado eres el unico que trabaja en el equipo");
                     vida -= 30;
 
                 }else{
-                    System.out.println("El enemigo entrega de proyectos te ha golpeado.");
+                    System.out.println("El enemigo ENTREGA DE PROYECTOS te ha golpeado.");
                     System.out.println("El enemigo ha usado ensayo de 25 cuartillas en formato Apa");
                     vida -= 20;
                 }
@@ -106,7 +109,7 @@ public class PruebaRPG {
                     if (eleccionDeAtaque.equals("A")) {
                         System.out.println("Has utilizado el ataque se me trabo el zoom");
                         vidaSegundo = vidaSegundo - ataqueBasico;
-                        System.out.println("A Entrevista le queda " + vidaSegundo + " de vida.");
+                        System.out.println("A ENTREGA DE PROYECTO le queda " + vidaSegundo + " de vida.");
                         eleccionDeAtaque = eleccionDeAtaque.replace("A"," ");
                             
                     } else {
@@ -116,11 +119,13 @@ public class PruebaRPG {
                         } else {
                             System.out.println("Has utilizado el ataque disparo de Balderas");
                             vidaSegundo = vidaSegundo - ataqueEspecial;
-                            System.out.println("A Entrevista le queda " + vidaSegundo + " de vida.");
+                            System.out.println("A ENETREGA DE PROYECTOS le queda " + vidaSegundo + " de vida.");
                             atckEspFal = atckEspFal -1;
                             eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
                         } if (eleccionDeAtaque.equals("C")){
                             inv.elegirInv(vida,ataqueEspecial,true);
+                            vida = inv.cambioV;
+                            ataqueEspecial = inv.cambioA;
                         }
                     }
                 }
@@ -130,7 +135,7 @@ public class PruebaRPG {
             if (vida <= 21){
                 System.out.println("Has perdido");
             }else{
-            System.out.println("Felicidades! Has derrotado a Entrega de Proyectos");
+            System.out.println("Felicidades! Has derrotado a ENTREGA DE PROYECTOS");
             vida = 100;
             atckEspFal = 2; 
             
@@ -144,7 +149,7 @@ public class PruebaRPG {
                             vida -= 45;
 
                         }else{
-                            System.out.println("El enemigo entrega de proyectos te ha golpeado.");
+                            System.out.println("El enemigo PLATICA CON VIC te ha golpeado.");
                             System.out.println("El enemigo ha usado pregunta basica");
                             vida -= 30;
                         }
@@ -161,7 +166,7 @@ public class PruebaRPG {
                             if (eleccionDeAtaque.equals("A")) {
                                 System.out.println("Has utilizado el ataque se me trabo el zoom");
                                 vidaTercero = vidaTercero - ataqueBasico;
-                                System.out.println("A Entrevista le queda " + vidaTercero + " de vida.");
+                                System.out.println("A PLATICA CON VIC le queda " + vidaTercero + " de vida.");
                                 eleccionDeAtaque = eleccionDeAtaque.replace("A"," ");
                                     
                             } else {
@@ -171,11 +176,13 @@ public class PruebaRPG {
                                 } else {
                                     System.out.println("Has utilizado el ataque disparo de Balderas");
                                     vidaTercero = vidaTercero - ataqueEspecial;
-                                    System.out.println("A Entrevista le queda " + vidaTercero + " de vida.");
+                                    System.out.println("A PLATICA CON VIC le queda " + vidaTercero + " de vida.");
                                     atckEspFal = atckEspFal -1;
                                     eleccionDeAtaque = eleccionDeAtaque.replace("B"," ");
                                 } if (eleccionDeAtaque.equals("C")){
                                     inv.elegirInv(vida,ataqueEspecial,true);
+                                    vida = inv.cambioV;
+                                    ataqueEspecial = inv.cambioA;
                                 }
                             }
                         }
@@ -186,6 +193,7 @@ public class PruebaRPG {
         sc.close();
       
         }
+    System.out.println("Has derrotado a todos los enemigos felicidades has entrado a Nautilus");
  }
     
         

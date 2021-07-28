@@ -20,6 +20,9 @@ public class Inventario {
     String seleccionInventario;
     boolean conciclo = true;
     String seleccionInventario1;
+    int cambioV = 0;
+    int cambioA = 0;
+    
     public void elegirInv(int vida, int ataqueEspecial,boolean conciclo) {
         Scanner schere = new Scanner(System.in);
         while (conciclo == true){
@@ -70,7 +73,8 @@ public class Inventario {
         textoInventario2(vida,ataqueEspecial);
         System.out.println("Presiona enter para continuar");
         seleccionInventario1 = schere.nextLine();
-
+        cambioV = vida;
+        cambioA = ataqueEspecial;
         //schere.close();
     }
         }
